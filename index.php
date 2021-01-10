@@ -6,10 +6,26 @@ $pdo = new PDO('mysql:host=mysql;dbname=anime;host=127.0.0.1', 'root', '', [
 $sql = $pdo->query("SELECT * FROM list");
 
 $animes = $sql->fetchAll();
+$time;
+$m;
+$h;
 
 function get_hour(){
     $time = $anime['time'] * $anime['ep'] / 60;
+    $m = $time;
+    $h = $time;
+    while ($m >= 1){
+        $m = $m - 1;
+    }
+    if ($m !== 1){
+        $h = round( $h , 0 , PHP_ROUND_HALF_DOWN);
+        $m = $m * 60;
+    }else{
+        $h = round( $h , 0);
+        $m = 0;
+    }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +51,7 @@ function get_hour(){
         <p>Le nombre d'ep : <?= $anime['ep']?></p>
         <p>Le nombre de saisons : <?= $anime['season']?></p> 
         <p>Les tags : <?= $anime['tags']?></p>
-        <p>Le temps necessaire pour le regarder : <?= get_hour()?>h</p>
+        <p>Le temps necessaire pour le regarder : <?= get_hour(); $time?>h ou <?= $h?>h ou <?= $m ?></p>
     </div>
     <hr>
     <?php endforeach;?>
