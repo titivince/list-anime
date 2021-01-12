@@ -7,3 +7,4 @@
 - number of episode
 - number of seasons 
 - tags
+- link to watch it or AMV
