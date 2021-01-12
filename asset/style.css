@@ -9,7 +9,6 @@ body{
     outline: none;
 }
 nav{
-    padding: .4em 0;
     background-color: #000;
 }
 a{
@@ -69,7 +68,21 @@ footer{
 }
 
 @media screen and ( max-width: 1024px){
+    nav{
+        flex-direction: column;
+        
+    }
+    nav a{
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px solid oldlace;
+    }
     .block{
         width: 48%;
+    }
+}
+@media screen and (max-width: 426px){
+    .block{
+        width: 94%;
     }
 }
