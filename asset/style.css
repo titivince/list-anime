@@ -5,9 +5,23 @@
 body{
     background-color: rgb(35, 35, 35);
 }
-nav,nav a, footer{
-    padding: .3em;
+:focus{
+    outline: none;
+}
+nav{
+    padding: .4em 0;
     background-color: #000;
+}
+a{
+    text-decoration: none;
+    color: cadetblue;
+    margin: .2em .4em;
+}
+nav a, footer{
+    margin: 0;
+    padding: .4em;
+    background-color: #000;
+    border: none;
     color: rgb(200, 200, 200);
 }
 h1{
@@ -22,6 +36,7 @@ nav a:hover{
 .main-block{
     justify-content: space-evenly;
     flex-wrap: wrap;
+
 }
 .block{
     width: 31.8%;
@@ -38,22 +53,23 @@ nav a:hover{
 }
 
 h2{
-    margin: .5em 0;
+    margin: .4em 0;
 }
 p{
     margin: .2em .4em;
 }
 .desc{
-    margin: .5em;
-}
-a{
-    text-decoration: none;
-    color: cadetblue;
-    margin: .2em .4em;
+    margin: .2em;
 }
 .info{
     justify-content: space-evenly;
 }
 footer{
     margin-top: .8em;
+}
+
+@media screen and ( max-width: 1024px){
+    .block{
+        width: 48%;
+    }
 }
