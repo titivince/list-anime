@@ -34,16 +34,12 @@ h1{
     margin: .3em 0;
     color:cadetblue;
 }
-form{
-    display: flex;
-    justify-content: flex-end;
-}
 input{
-    margin: .5em .5em 0 0;
+    margin: .4em .5em;
+    padding: 0 .2em;
     background-color: cadetblue;
-    padding: .2em;
     border-radius: .4em;
-    border: transparent;
+    border: none;
 }
 .main-block{
     justify-content: space-evenly;

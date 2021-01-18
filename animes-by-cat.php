@@ -18,10 +18,6 @@ if(isset($_POST["select"])){
 </head>
 <body>
 <?php require('src/nav.html'); ?>
-    <form action="" method="POST">
-        <input type="text" name="select">
-        <input type="submit" value="rechercher">   
-    </form>
     <h1 class="center">Animes par tags</h1>
     <?php
     if(!empty($animes)){
