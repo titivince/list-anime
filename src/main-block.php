@@ -11,12 +11,12 @@
                 }
                 if ($m !== 1){
                     $h = round( $h , 0 , PHP_ROUND_HALF_UP);
-                    if($h > $time ){
+                    if($h > $time){
                      $h = $h - 1; 
                     }
                     $m = $m * 60;
                 }else{
-                    $h = round( $h , 0);
+                    $h = round($h , 0);
                     $m = 0;
                 }
                 ?>
