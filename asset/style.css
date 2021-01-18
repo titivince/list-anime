@@ -16,20 +16,22 @@ a{
     color: cadetblue;
     margin: .2em .4em;
 }
-nav a, footer{
+nav a{
     margin: 0;
     padding: .4em;
     background-color: #000;
     border: none;
+    border-radius: 0 0 .5em .5em;
     color: rgb(200, 200, 200);
 }
 nav a:hover{
     background-color: cadetblue;
+    border-radius: 0 0 .5em .5em;
     color: black;
     transition: .5s;
 }
 h1{
-    margin-top: .3em;
+    margin: .3em 0;
     color:cadetblue;
 }
 form{
@@ -49,8 +51,8 @@ input{
 
 }
 .block{
-    width: 31.8%;
-    margin-top: 1em;
+    width: 32%;
+    margin-bottom: .8em;
     background-color: black;
     color: cadetblue;
     border-radius: .5em;
@@ -63,7 +65,7 @@ input{
 }
 
 h2{
-    margin: .4em 0;
+    margin: .2em 0;
 }
 p{
     margin: .2em .4em;
@@ -92,9 +94,11 @@ footer{
     nav a{
         text-align: center;
         width: 100%;
+        border-radius: 0;
         border-bottom: 1px solid oldlace;
+        padding: .4em 0;
     }
     .block{
-        width: 94%;
+        width: 96%;
     }
 }

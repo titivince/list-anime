@@ -20,8 +20,5 @@ $animes = $sql->fetchAll();
     <?php require('src/nav.html'); ?>
     <h1 class="center">Les derniers animés regardés</h1>
     <?php require('src/main-block.php'); ?>
-    <footer>
-        blabla c drole
-    </footer>
 </body>
 </html>
