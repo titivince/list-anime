@@ -3,15 +3,14 @@ require('src/function.php');
 require('src/pdo.php');
 
 $pdo = (new Connection())->pdo();
-if(isset($_GET["select"])){
-    $sql = $pdo->query("SELECT * FROM list WHERE tags LIKE '%{$_GET["select"]}%' ");
+if(isset($_POST["select"])){
+    $sql = $pdo->query("SELECT * FROM list WHERE tags LIKE '%{$_POST["select"]}%' ");
 
     $animes = $sql->fetchAll();
 }
-
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,16 +19,15 @@ if(isset($_GET["select"])){
 </head>
 <body>
 <?php require('src/nav.html'); ?>
-    <h1 class="center">Animes par cat</h1>
-    <form action="" method="GET">
+    <form action="" method="POST">
         <input type="text" name="select">
-        <input type="submit" value="recherche">   
+        <input type="submit" value="rechercher">   
     </form>
+    <h1 class="center">Animes par tags</h1>
     <?php
     if(!empty($animes)){
         require('src/main-block.php');
-    }
-    else{
+    }else{
         echo '<h3 class="center">Aucun résultat</h3>';
     }
     ?>
