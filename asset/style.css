@@ -81,7 +81,6 @@ form div{
 footer{
     margin-top: .8em;
 }
-
 @media screen and ( max-width: 1024px){
     .block{
         width: 48%;
@@ -90,7 +89,6 @@ footer{
 @media screen and (max-width: 426px){
     nav{
         flex-direction: column;
-        
     }
     nav a{
         text-align: center;
