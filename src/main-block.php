@@ -21,7 +21,7 @@
             }
             ?>
             <h2 class="center"><?= $anime['name']?></h2>
-            <p class="desc">synopsys : <?= excerpt($anime['desc'])?></p>
+            <p class="desc">synopsys : <?= excerpt($anime['plot'])?></p>
             <a href="<?= $anime['link']?>" target="_blank">Lien vidéo</a>
             <div class="info d-flex">
                 <p>Saisons : <?= $anime['season']?></p> 

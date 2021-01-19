@@ -3,8 +3,7 @@ require('src/function.php');
 require('src/pdo.php');
 
 $pdo = (new Connection())->pdo();
-
-$sql = $pdo->query("SELECT * FROM list ORDER BY id DESC LIMIT 15");
+$sql = $pdo->query("SELECT * FROM new");
 
 $animes = $sql->fetchAll();
 ?>
@@ -14,11 +13,17 @@ $animes = $sql->fetchAll();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="asset/style.css">
-    <title>Animes</title>
+    <title>A voir</title>
 </head>
 <body>
     <?php require('src/nav.html'); ?>
-    <h1 class="center">Les derniers animés regardés</h1>
-    <?php require('src/main-block.php'); ?>
+    <h1 class="center">Animes a voir</h1>
+    <?php 
+    if(!empty($animes)){
+        require('src/a-voir-block.php');
+    }else{
+        echo '<h3 class="center">Il y a aucun animes a voir</h3>';
+    }
+     ?>
 </body>
 </html>

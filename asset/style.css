@@ -14,10 +14,8 @@ nav{
 a{
     text-decoration: none;
     color: cadetblue;
-    margin: .2em .4em;
 }
 nav a{
-    margin: 0;
     padding: .4em;
     background-color: #000;
     border: none;
@@ -31,7 +29,7 @@ nav a:hover{
     transition: .5s;
 }
 h1{
-    margin: .3em 0;
+    margin: .2em 0;
     color:cadetblue;
 }
 input{
@@ -40,6 +38,7 @@ input{
     background-color: cadetblue;
     border-radius: .4em;
     border: none;
+    color: #fff;
 }
 .main-block{
     justify-content: space-evenly;
@@ -49,6 +48,7 @@ input{
 .block{
     width: 32%;
     margin-bottom: .8em;
+    padding-bottom: .2em;
     background-color: black;
     color: cadetblue;
     border-radius: .5em;
@@ -59,19 +59,24 @@ input{
 .center{
     text-align: center;
 }
-
 h2{
     margin: .2em 0;
 }
-p{
+p, div a{
     margin: .2em .4em;
+}
+div a:hover{
+    color: #fff;
 }
 .desc{
     margin: .2em;
 }
-
 .info{
     justify-content: space-evenly;
+}
+form div{
+    padding: .5em;
+    color: #fff;
 }
 footer{
     margin-top: .8em;
