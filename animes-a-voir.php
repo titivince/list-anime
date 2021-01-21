@@ -1,5 +1,4 @@
 <?php
-require('src/function.php');
 require('src/pdo.php');
 
 $pdo = (new Connection())->pdo();
@@ -25,5 +24,8 @@ $animes = $sql->fetchAll();
         echo '<h3 class="center">Il y a aucun animes a voir</h3>';
     }
      ?>
+     <footer>
+        <a href="cree-anime.php">Ajouté un anime</a>
+     </footer>
 </body>
 </html>

@@ -31,3 +31,11 @@ VALUES
 ('name','desc','tags',24,2,8),
 ... 
 ('name','desc','tags',24,2,8);*/
+
+INSERT INTO `new` ('name', 'w')
+VALUES
+('name', 'w');
+/* for more just add
+('name', 'w'),
+...
+('name', 'w'); */

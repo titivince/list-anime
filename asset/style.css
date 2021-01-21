@@ -78,8 +78,24 @@ form div{
     padding: .5em;
     color: #fff;
 }
+input[type=submit]{
+    background-color: none;
+    padding: .2em;
+}
+input[type=submit]:hover{
+    background-color: cadetblue;
+}
 footer{
-    margin-top: .8em;
+    display: flex;
+    justify-content: center;
+}
+footer a{
+    padding: .2em;
+    border-radius: .4em;
+}
+footer a:hover{
+    background-color: #fff;
+    transition: .5s;
 }
 @media screen and ( max-width: 1024px){
     .block{

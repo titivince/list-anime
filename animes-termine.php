@@ -1,5 +1,4 @@
 <?php
-require('src/function.php');
 require('src/pdo.php');
 
 $pdo = (new Connection())->pdo();
@@ -21,9 +20,8 @@ if(!empty($_POST['name'])){
     ('$name', '$desc', '$link', $season, $ep, $time,'$tags')");
 
     $del = $pdo->query("DELETE FROM new WHERE id = {$_GET['id']}");
-    echo '<h1>c\'est envoyé</h1>';
 
-    header("location: ../list-animes/");
+    header("location: ../list-anime/");
 }
 ?>
 <!DOCTYPE html>
