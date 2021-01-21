@@ -41,7 +41,7 @@ if(!empty($_POST['name'])){
         </div>
         <div>
             <label>La desc :</label>
-            <input type="text" name="plot" placeholder="desc">
+            <textarea type="text" name="plot" placeholder="desc"></textarea>
         </div>
         <div>
             <label>Un lien :</label>
