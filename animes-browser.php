@@ -4,7 +4,7 @@ require('src/pdo.php');
 
 $pdo = (new Connection())->pdo();
 if(isset($_POST["select"])){
-    $sql = $pdo->query("SELECT * FROM list WHERE tags LIKE '%{$_POST["select"]}%' ");
+    $sql = $pdo->query("SELECT * FROM list WHERE tags OR name OR plot LIKE '%{$_POST["select"]}%' ");
     $animes = $sql->fetchAll();
 }
 ?>
