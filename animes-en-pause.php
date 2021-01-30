@@ -2,9 +2,18 @@
 require('src/pdo.php');
 
 $pdo = (new Connection())->pdo();
-$sql = $pdo->query("SELECT * FROM later");
 
-$animes = $sql->fetchAll();
+if(isset($_GET['id'])) {
+    $sql = $pdo->query("SELECT * FROM new WHERE id = {$_GET['id']}");
+
+    $send = $sql->fetch();
+
+    $sql = $pdo->query("INSERT INTO later VALUES (`$send['name']`, `$send['ep']`)");
+} else {
+    $sql = $pdo->query("SELECT * FROM later");
+
+    $animes = $sql->fetchAll();
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -19,6 +28,8 @@ $animes = $sql->fetchAll();
     <h2>Animes en pause</h2>
     <?php if(!empty($animes)){
         require('src/pause-block.php');
+    } elseif(isset($send)) {
+        echo '<h3 class="center">Animé bien mis en pause</h3>';
     }else{
         echo '<h3 class="center">Il y a aucun animes en pause</h3>';
     } ?>
