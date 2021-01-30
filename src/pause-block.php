@@ -3,8 +3,8 @@
     foreach ($animes as $anime): ?>
         <div class="block">
             <h2 class="center"><?= $anime['name']?></h2>
-            <p>En cour de visionnage : <?= $anime['w'] ?></p>
-            <a href="animes-termine.php?id=<?= $anime['id']?>">Terminer</a>
+            <a href="<?= $anime['link'] ?>" target="_blank">Lien</a>
+            <a href="repise-animes.php?id=<?= $anime['id'] ?>">Reprendre</a>
         </div>
     <?php endforeach; ?>
 </div>

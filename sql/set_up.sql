@@ -29,6 +29,14 @@ CREATE TABLE IF NOT EXISTS `film` (
   `plot` VARCHAR(255),
   PRIMARY KEY (`id`)
 );
+
+CREATE TABLE IF NOT EXISTS `later` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255),
+  `link` VARCHAR(255),
+  PRIMARY KEY (`id`)
+);
+
 /* fill database */
 
 INSERT INTO `list`(`name`, `plot`, `tags`, `ep`, `season`, `time`) 
