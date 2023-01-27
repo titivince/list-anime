@@ -2,7 +2,7 @@
 require('src/pdo.php');
 
 $pdo = (new Connection())->pdo();
-$sql = $pdo->query("SELECT * FROM new WHERE id = {$_GET['id']}");
+$sql = $pdo->query("SELECT id,name,plot,link,season,ep,time,tags FROM new WHERE id = {$_GET['id']}");
 
 $animes = $sql->fetch();
 if(!empty($_POST['name'])){
@@ -17,9 +17,9 @@ if(!empty($_POST['name'])){
 
     $env = $pdo->query("INSERT INTO list (name, plot ,link ,season ,ep ,time ,tags)
     VALUES
-    ('$name', '$desc', '$link', $season, $ep, $time,'$tags')");
+    ('$name', '$desc', '$link', '$season', '$ep', '$time','$tags')");
 
-    $del = $pdo->query("DELETE FROM new WHERE id = {$_GET['id']}");
+    $del = $pdo->query("DELETE FROM new WHERE id = {$_GET[id]}");
 
     header("location: ../list-anime/");
 }

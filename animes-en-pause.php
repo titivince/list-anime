@@ -8,7 +8,7 @@ if(isset($_GET['id'])) {
 
     $send = $sql->fetch();
 
-    $sql = $pdo->query("INSERT INTO later VALUES (`$send['name']`, `$send['ep']`)");
+    $sql = $pdo->query("INSERT INTO later VALUES (`$send[name]`, `$send[ep]`)");
 } else {
     $sql = $pdo->query("SELECT * FROM later");
 
@@ -31,7 +31,7 @@ if(isset($_GET['id'])) {
     } elseif(isset($send)) {
         echo '<h3 class="center">Animé bien mis en pause</h3>';
     }else{
-        echo '<h3 class="center">Il y a aucun animes en pause</h3>';
+        echo '<h3 class="center">Il y a aucun animé en pause</h3>';
     } ?>
 </body>
 </html>
